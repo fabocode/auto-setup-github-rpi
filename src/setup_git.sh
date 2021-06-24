@@ -13,6 +13,11 @@ do
 done
 echo "Username: $username"; # github account 
 echo "Age: $password";  # password 
-echo "email: $email"
+echo "email: $email"; # email 
 
 # setup git with username and email
+git config --global user.name $username
+git config --global user.email $email
+
+# enable colored output in the terminal
+git config --global colorl.ui true
