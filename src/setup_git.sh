@@ -11,8 +11,16 @@ do
         e) email=${OPTARG};; # save -e into email
     esac
 done
+
+# abort if no input is supplied 
+if [ $# -eq 0 ]
+    then 
+        echo "No arguments supplied"
+        exit 1
+fi
+
 echo "Username: $username"; # github account 
-echo "Age: $password";  # password 
+echo "password: $password";  # password 
 echo "email: $email"; # email 
 
 # setup git with username and email
