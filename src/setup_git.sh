@@ -19,17 +19,16 @@ if [ $# -eq 0 ]
         exit 1
 fi
 
-echo "Username: $username"; # github account 
-echo "password: $password";  # password 
-echo "email: $email"; # email 
-
 # setup git with username and email
 git config --global user.name $username
 git config --global user.email $email
+echo "Username: $username"; # github account 
+echo "email: $email"; # email 
 
 # enable colored output in the terminal
 git config --global colorl.ui true
 
 # setup your ssh into Raspberry Pi 
 ssh-keygen -t rsa -C $email 
+echo "ssh-keygen generated, now register into your github account"
 cat ~/.ssh/id_rsa.pub # display the generate ssh key into display  
