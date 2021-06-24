@@ -29,3 +29,7 @@ git config --global user.email $email
 
 # enable colored output in the terminal
 git config --global colorl.ui true
+
+# setup your ssh into Raspberry Pi 
+ssh-keygen -t rsa -C $email 
+cat ~/.ssh/id_rsa.pub # display the generate ssh key into display  
